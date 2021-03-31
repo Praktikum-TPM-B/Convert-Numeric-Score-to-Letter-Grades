@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/upn"
+        android:layout_marginBottom="10dp"
+        android:contentDescription="@string/logo_upn" />
+
+    <TextView
+        android:id="@+id/tv_hasil"
+        android:layout_width="335dp"
+        android:layout_height="wrap_content"
+        android:textFontWeight="@android:integer/config_mediumAnimTime"
+        android:text=""/>
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="335dp"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:hint="@string/nama_lengkap"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/et_nim"
+        android:layout_width="335dp"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:hint="@string/masukkan_nim"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/et_skor"
+        android:layout_width="333dp"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:hint="@string/masukkan_interval_skor"
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/submit" />
+
+
+</LinearLayout>

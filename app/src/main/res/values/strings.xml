@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Form Mahasiswa</string>
+    <string name="nama_lengkap">Masukkan Nama</string>
+    <string name="masukkan_nim">Masukkan NIM</string>
+    <string name="submit">submit</string>
+    <string name="masukkan_interval_skor">Masukkan Interval Skor</string>
+    <string name="nama">Nama</string>
+    <string name="nim">NIM</string>
+    <string name="nilai">Nilai</string>
+    <string name="empty">:</string>
+    <string name="logo_upn">logo upn</string>
+</resources>
