@@ -11,10 +11,6 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private final String NAMA = "NAMA";
-    private final String NIM = "NIM";
-    private final String HASIL = "HASIL";
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,39 +27,38 @@ public class MainActivity extends AppCompatActivity {
                 try {
                     String nama    = etNama.getText().toString();
                     String nim     = etNIM.getText().toString();
-                    String skor    = etSkor.getText().toString();
+                    String score   = etSkor.getText().toString();
                     Intent i = new Intent(MainActivity.this, HasilActivity.class);
-                    i.putExtra(NAMA, nama);
-                    i.putExtra(NIM, nim);
-                    double hasil   = Double.parseDouble(skor);
+                    i.putExtra("NAMA", nama);
+                    i.putExtra("NIM", nim);
+                    double skor   = Double.parseDouble(score);
 
-                    if(hasil <= 4.00){
-                        if(hasil > 3.66 && hasil <= 4.00){
-                            i.putExtra(HASIL, "A");
-                        }else if(hasil > 3.33 && hasil <= 3.66) {
-                            i.putExtra(HASIL, "A-");
-                        }else if(hasil > 3.00 && hasil <= 3.33) {
-                            i.putExtra(HASIL, "B+");
-                        }else if(hasil > 2.66 && hasil <= 3.00) {
-                            i.putExtra(HASIL, "B");
-                        }else if(hasil > 2.33 && hasil <= 2.66) {
-                            i.putExtra(HASIL, "B-");
-                        }else if(hasil > 2.00 && hasil <= 2.33) {
-                            i.putExtra(HASIL, "C+");
-                        }else if(hasil > 1.66 && hasil <= 2.00) {
-                            i.putExtra(HASIL, "C");
-                        }else if(hasil > 1.33 && hasil <= 1.66) {
-                            i.putExtra(HASIL, "C-");
-                        }else if(hasil > 1.00 && hasil <= 1.33) {
-                            i.putExtra(HASIL, "D+");
+                    if(skor <= 4.00){
+                        if(skor > 3.66 && skor <= 4.00){
+                            i.putExtra("PREDIKAT", "A");
+                        }else if(skor > 3.33 && skor <= 3.66) {
+                            i.putExtra("PREDIKAT", "A-");
+                        }else if(skor > 3.00 && skor <= 3.33) {
+                            i.putExtra("PREDIKAT", "B+");
+                        }else if(skor > 2.66 && skor <= 3.00) {
+                            i.putExtra("PREDIKAT", "B");
+                        }else if(skor > 2.33 && skor <= 2.66) {
+                            i.putExtra("PREDIKAT", "B-");
+                        }else if(skor > 2.00 && skor <= 2.33) {
+                            i.putExtra("PREDIKAT", "C+");
+                        }else if(skor > 1.66 && skor <= 2.00) {
+                            i.putExtra("PREDIKAT", "C");
+                        }else if(skor > 1.33 && skor <= 1.66) {
+                            i.putExtra("PREDIKAT", "C-");
+                        }else if(skor > 1.00 && skor <= 1.33) {
+                            i.putExtra("PREDIKAT", "D+");
                         }else {
-                            i.putExtra(HASIL, "D");
+                            i.putExtra("PREDIKAT", "D");
                         }
                         startActivity(i);
                     }else {
                         Toast.makeText(getApplication(), "Interval skor tidak boleh di atas 4.00!", Toast.LENGTH_SHORT).show();
                     }
-
 
                 }catch (Exception e) {
                     e.printStackTrace();

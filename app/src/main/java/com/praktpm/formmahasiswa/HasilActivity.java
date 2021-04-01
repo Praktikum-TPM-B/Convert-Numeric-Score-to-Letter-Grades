@@ -18,16 +18,13 @@ public class HasilActivity extends AppCompatActivity {
 
         Bundle extras = getIntent().getExtras();
 
-        String NAMA = "NAMA";
-        String nama = extras.getString(NAMA);
+        String nama = extras.getString("NAMA");
         txtNama.setText(String.format(": %s", nama));
 
-        String NIM = "NIM";
-        String nim = extras.getString(NIM);
+        String nim = extras.getString("NIM");
         txtNim.setText(String.format(": %s", nim));
 
-        String HASIL = "HASIL";
-        String hasil = extras.getString(HASIL);
+        String hasil = extras.getString("HASIL");
         txtHasil.setText(String.format(": %s", hasil));
     }
 }
