@@ -12,9 +12,9 @@ public class HasilActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hasil);
 
-        TextView txtNama  = (TextView) findViewById(R.id.nama);
-        TextView txtNim   = (TextView) findViewById(R.id.nim);
-        TextView txtHasil = (TextView) findViewById(R.id.nilai);
+        TextView txtNama     = findViewById(R.id.nama);
+        TextView txtNim      = findViewById(R.id.nim);
+        TextView txtPredikat = findViewById(R.id.predikat);
 
         Bundle extras = getIntent().getExtras();
 
@@ -25,6 +25,6 @@ public class HasilActivity extends AppCompatActivity {
         txtNim.setText(String.format(": %s", nim));
 
         String hasil = extras.getString("PREDIKAT");
-        txtHasil.setText(String.format(": %s", hasil));
+        txtPredikat.setText(String.format(": %s", hasil));
     }
 }
