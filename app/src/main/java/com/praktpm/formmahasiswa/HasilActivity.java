@@ -24,7 +24,7 @@ public class HasilActivity extends AppCompatActivity {
         String nim = extras.getString("NIM");
         txtNim.setText(String.format(": %s", nim));
 
-        String hasil = extras.getString("HASIL");
+        String hasil = extras.getString("PREDIKAT");
         txtHasil.setText(String.format(": %s", hasil));
     }
 }
